@@ -55,21 +55,6 @@ main {
   }
 }
 
-.artimg {
-  img {
-    position: relative;
-    gap: 1rem;
-    display: inline-block;
-  }
-}
-.text-hover {
-  position: absolute;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  padding: 10px;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -79,27 +64,26 @@ img {
   border-radius: 30px;
 }
 
-img:hover {
+/*img:hover {
   opacity: 0.8;
   box-shadow: 0 0 20px rgb(0, 0, 0);
+}*/
+
+.sectionarts article {
+  position: relative;
+  overflow: hidden;
 }
 
-.artimg {
-  img {
-    position: relative;
-    gap: 1rem;
-    display: inline-block;
-  }
-}
-
-.artimg:hover .text-hover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.sectionarts article .text-hover {
   position: absolute;
-  opacity: 0;
   top: 50%;
   left: 50%;
-  padding: 10px;
-  z-index: 1;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sectionarts article:hover .text-hover {
+  opacity: 1;
 }
