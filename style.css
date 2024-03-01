@@ -33,10 +33,6 @@ main {
   }
 }
 
-.sectionarts {
-  position: relative;
-}
-
 .section1 {
   display: flex;
   justify-content: center;
@@ -73,21 +69,21 @@ img {
   box-shadow: 0 0 20px rgb(0, 0, 0);
 }*/
 
-.artimg {
-  display: flex;
-  align-items: center;
+.sectionarts article {
+  position: relative;
+  overflow: hidden;
 }
 
-.text-hover {
+.sectionarts article .text-hover {
   position: absolute;
-  z-index: 1;
-  left: 35%;
-  top: 24%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
-  color: white;
-  background-color: rgba(255, 255, 255, 0);
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.artimg:hover .text-hover {
+.sectionarts article:hover .text-hover {
   opacity: 1;
 }
