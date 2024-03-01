@@ -64,11 +64,6 @@ img {
   border-radius: 30px;
 }
 
-/*img:hover {
-  opacity: 0.8;
-  box-shadow: 0 0 20px rgb(0, 0, 0);
-}*/
-
 .sectionarts article {
   position: relative;
   overflow: hidden;
@@ -76,14 +71,22 @@ img {
 
 .sectionarts article .text-hover {
   position: absolute;
-  top: 50%;
+  color: white;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  z-index: 2;
   transition: opacity 0.3s ease-in-out;
 }
 
 .sectionarts article:hover .text-hover {
   opacity: 1;
+}
+
+.menu-options {
+  display: none;
+}
+
+.img-menu:hover + .menu-options {
+  display: block;
 }
